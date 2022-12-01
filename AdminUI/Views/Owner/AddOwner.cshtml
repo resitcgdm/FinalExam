@@ -1,0 +1,59 @@
+﻿@using Entities.Concrete
+@model List<Owner>
+<div class="content">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="title">Edit Profile</h5>
+                </div>
+                <div class="card-body">
+                    <form asp-action="AddOwner" asp-controller="Owner" method="post">
+                        <div class="row">
+                           
+                            @*<div class="col-md-3 px-md-1">
+                                <div class="form-group d-none">
+                                    <label>Owner Id</label>
+
+                                    <input name="OwnerId" type="number" class="form-control " placeholder="OwnerId">
+
+                                </div>
+                            </div>*@
+                            <div class="col-md-4 pl-md-1">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Owner Name</label>
+                                    <input name="OwnerName" type="text" class="form-control " placeholder="OwnerName">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+
+                            <div class="col-md-6 pl-md-1">
+                                <div class="form-group">
+                                    <label>Owner Surname</label>
+                                    <input name="OwnerSurname" type="text" class="form-control" placeholder="OwnerSurname">
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-fill btn-primary">Save</button>
+                        </div>
+                        @if (TempData["message"] != null)
+                        {
+                            <div class="alert alert-info" role="alert">@TempData["message"]</div>
+                        }
+
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+</div>

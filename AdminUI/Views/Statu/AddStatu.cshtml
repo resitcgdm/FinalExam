@@ -1,0 +1,50 @@
+﻿@using Entities.Concrete
+@model List<Statu>
+<div class="content">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="title">Edit Profile</h5>
+                </div>
+                <div class="card-body">
+                    <form asp-action="AddStatu" asp-controller="Statu" method="post">
+                        <div class="row">
+
+                            <div class="col-md-3 px-md-1">
+                                <div class="form-group">
+                                    <label>Statu Id</label>
+
+                                    <input name="StatuId" type="number" class="form-control " placeholder="StatuId">
+
+                                </div>
+                            </div>
+                            <div class="col-md-4 pl-md-1">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Situtation</label>
+                                    <input name="Situtation" type="text" class="form-control " placeholder="Situtation">
+
+                                </div>
+                            </div>
+                        </div>
+                     
+
+
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-fill btn-primary">Save</button>
+                        </div>
+                        @if (TempData["message"] != null)
+                        {
+                            <div class="alert alert-info" role="alert">@TempData["message"]</div>
+                        }
+
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+</div>
